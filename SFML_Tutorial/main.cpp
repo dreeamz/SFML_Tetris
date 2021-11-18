@@ -1,7 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <time.h>
-#include<SFML/Audio.hpp>
-#include<iostream>
+#include <SFML/Audio.hpp>
+#include <iostream>
 #include <sstream>
 
 using namespace sf;
@@ -202,33 +202,33 @@ int main()
 
 	//Sozdaniye Texturi i frama
 	Texture texture, frame;
-	texture.loadFromFile("C:\\dev\\SFML_Tutorial\\images\\tiles.png");
-	frame.loadFromFile("C:\\dev\\SFML_Tutorial\\images\\Myframe7.png");
+	texture.loadFromFile("images\\tiles.png");
+	frame.loadFromFile("images\\Myframe7.png");
 	Sprite sprite(texture);
 	sprite.setTextureRect(IntRect(0, 0, 18, 18));
 	Sprite sprite1(frame);
 
 	//For music
 	Music music;
-	music.openFromFile("C:\\dev\\SFML_Tutorial\\Music\\TetrisMusic1.ogg");
+	music.openFromFile("Music\\TetrisMusic1.ogg");
 	music.setVolume(35);
 	music.play();
 
 	//For sound
 	SoundBuffer buffer;
-	buffer.loadFromFile("C:\\dev\\SFML_Tutorial\\Music\\sound1.ogg");
+	buffer.loadFromFile("Music\\sound1.ogg");
 	Sound sound;
 	sound.setBuffer(buffer);
 
 	//For sound gameover
 	SoundBuffer buffer1;
-	buffer1.loadFromFile("C:\\dev\\SFML_Tutorial\\Music\\GameOver.ogg");
+	buffer1.loadFromFile("Music\\GameOver.ogg");
 	Sound sound1;
 	sound1.setBuffer(buffer1);		
 				
 	//For text Next:
 	Font font;
-	font.loadFromFile("C:\\dev\\SFML_Tutorial\\Text\\file.ttf");
+	font.loadFromFile("Text\\file.ttf");
 	Text text;
 	text.setFont(font);
 	text.setString("Next:");
@@ -240,7 +240,7 @@ int main()
 
 	//For text GameOver:
 	
-	font.loadFromFile("C:\\dev\\SFML_Tutorial\\Text\\file.ttf");
+	font.loadFromFile("Text\\file.ttf");
 	Text gameover;
 	gameover.setFont(font);
 	gameover.setString("Game Over:(");
@@ -295,7 +295,7 @@ int main()
 		{
 			if (timerm > 180.000)
 			{
-				music.openFromFile("C:\\dev\\SFML_Tutorial\\Music\\TetrisMusic1.ogg");
+				music.openFromFile("Music\\TetrisMusic1.ogg");
 				music.play();
 				music.setVolume(35);
 				timerm = 0;
@@ -306,7 +306,7 @@ int main()
 		{
 			if (timerm > 83.000)
 			{
-				music.openFromFile("C:\\dev\\SFML_Tutorial\\Music\\TetrisMusic2.ogg");
+				music.openFromFile("Music\\TetrisMusic2.ogg");
 				music.play();
 				music.setVolume(40);
 				timerm = 0;
